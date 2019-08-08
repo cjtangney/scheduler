@@ -431,10 +431,10 @@ export default class DatePicker {
       buttonWrapper.append(removeWorkerBtn);
       newShift.append(buttonWrapper);
     } else {
-      const detailsHeader = document.createElement('div');
-      detailsHeader.setAttribute('id', 'date-details-header');
-      detailsHeader.innerText = 'There are currently no shifts scheduled on the selected date.';
-      this.detailsContent.append(detailsHeader);
+      const noShiftsHeader = document.createElement('span');
+      noShiftsHeader.classList.add('no-shifts-header');
+      noShiftsHeader.innerText = 'There are currently no shifts scheduled on the selected date.';
+      this.detailsContent.append(noShiftsHeader);
       buttonWrapper.append(addShiftBtn);
       this.detailsContent.append(buttonWrapper);
     }

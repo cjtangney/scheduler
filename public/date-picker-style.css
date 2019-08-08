@@ -1,8 +1,12 @@
 html, body {
-  background-color: #20262e;
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
+/*
 button#open-date-picker {
   background: #20262e;
   border: solid 1px white;
@@ -18,21 +22,21 @@ button#open-date-picker:hover {
   cursor: pointer;
   font-weight: 600;
 }
+*/
 
 section#scheduler {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div#date-picker {
-  min-width: 30rem;
-  max-width: 50rem;
+  width: 100%;
+  max-width: 75rem;
   margin: 0 auto;
-  background-color: black;
-  color: white;
-  border: solid 1px white;
-  display: flex;
-  flex-direction: column;
+  border: solid 1px #4e4e4e;
 }
 
 div#date-picker > .row {
@@ -41,7 +45,7 @@ div#date-picker > .row {
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
-  border-bottom: solid 1px white;
+  border-bottom: solid 1px #4e4e4e;
 }
 
 div#date-picker > .row:last-child {
@@ -51,7 +55,7 @@ div#date-picker > .row:last-child {
 div#date-picker > .row#days-of-week > div {
   text-align: center;
   width: 100%;
-  border-right: solid 1px white;
+  border-right: solid 1px #4e4e4e;
   padding: 1rem;
   font-weight: 600;
 }
@@ -65,10 +69,8 @@ div#date-picker > .row#row5 > div,
 div#date-picker > .row#row6 > div {
   width: calc(100% / 7);
   padding: 0.25rem 0 0 0.25rem;
-  height: 5rem;
-  background: black;
-  color: white;
-  border-right: solid 1px white;
+  height: 7rem;
+  border-right: solid 1px #4e4e4e;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -87,8 +89,8 @@ div#date-picker > .row#row4 > div:hover,
 div#date-picker > .row#row5 > div:hover,
 div#date-picker > .row#row6 > div:hover {
   cursor: pointer;
-  background: white;
-  color: black;
+  background: #1e87bb;
+  color: white;
   transition: all linear 0.125s;
 }
 
@@ -107,7 +109,7 @@ div#date-picker > .row#days-of-week > div:last-child {
 }
 
 div#date-details-modal {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   position: absolute;
   top: 0;
   right: 0;
@@ -115,6 +117,7 @@ div#date-details-modal {
   left: 0;
   display: none;
   visibility: hidden;
+  z-index: 90;
 }
 
 div#date-details-modal.open {
@@ -124,7 +127,7 @@ div#date-details-modal.open {
 
 
 div.date-details-content {
-  background: lightgray;
+  background: #f1f1f1;
   border-radius: 5px;
   color: black;
   padding: 1rem;
@@ -133,6 +136,9 @@ div.date-details-content {
   position: relative;
   top: 10%;
   max-width: 40rem;
+  box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.5);
 }
 
 div.date-details-content > .date-details-modal-close {
@@ -161,6 +167,15 @@ div#date-details-header {
   font-size: 125%;
   margin-bottom: 1rem;
   padding-top: 1.5rem;
+}
+
+span.no-shifts-header {
+  display: flex;
+  justify-content: center;
+  font-size: 125%;
+  margin: 0 auto 1rem auto;
+  padding-top: 1.5rem;
+  width: 100%;
 }
 
 div#shifts > [class*="shift-"] {
