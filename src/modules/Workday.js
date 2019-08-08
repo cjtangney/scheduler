@@ -1,10 +1,12 @@
+import Shift from './Shift.js';
+
 /**
  * Building block for a Workweek. Contains one or
  * more Shifts.
  *
  * @date {Date}
  */
-class Workday {
+export default class Workday {
 	constructor(
     date,
     shifts = []

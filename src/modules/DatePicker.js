@@ -1,3 +1,5 @@
+import Workweek from './Workweek.js';
+
 /**
  * Interface for interacting with Workweeks,
  * Workdays, and Shifts. Contains schedule information
@@ -7,7 +9,7 @@
  *	=> Include a date argument for initializing DatePickers
  *     in different months.
  */
-class DatePicker {
+export default class DatePicker {
   constructor() {
     const RIGHT_NOW = new Date();
     this.month = RIGHT_NOW.getMonth();

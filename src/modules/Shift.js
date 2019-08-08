@@ -7,7 +7,7 @@
  * @workersNeeded {Number=}
  * @workersOn {Number=}
  */
-class Shift {
+export default class Shift {
 	constructor(
     date,
     hours = 8,

@@ -1,3 +1,4 @@
+import Workday from './Workday.js';
 
 /**
  * The Workweek is a collection of Workdays, containing
@@ -6,7 +7,7 @@
  * @weekStart {Date}
  * @weekEnd {Date=}
  */
-class Workweek {
+export default class Workweek {
 	constructor(
   	weekStart,
     weekEnd,
