@@ -53,9 +53,11 @@ div#date-picker > .row:last-child {
 }
 
 div#date-picker > .row#days-of-week > div {
+  background: #4e4e4e;
+  color: white;
   text-align: center;
   width: 100%;
-  border-right: solid 1px #4e4e4e;
+  border-right: solid 1px white;
   padding: 1rem;
   font-weight: 600;
 }
